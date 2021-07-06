@@ -11,7 +11,7 @@ session
 wiki/
 pack/
 utils/java/*
-lv-config.lua
+lv-config.example.lua
 lua-language-server/
 eclipse.jdt.ls/
 .language-servers/
