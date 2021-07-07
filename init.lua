@@ -17,4 +17,5 @@ end
 --   require "lsp.emmet-ls"
 -- end
 -- if O.lang.tailwindcss.active then
---   require "lsp.tailwind
+--   require "lsp.tailwindcss-ls"
+-- end
