@@ -14,12 +14,9 @@ O.colorscheme = "base16-solarized-light"
 O.auto_close_tree = 0
 O.wrap_lines = false
 O.timeoutlen = 300
-O.document_highlight = true
 O.leader_key = " "
 O.ignore_case = true
 O.smart_case = true
-O.lushmode = false
-O.transparent_window = false
 
 -- TODO User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -38,39 +35,35 @@ O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = { "haskell" }
 O.treesitter.highlight.enabled = true
 
-O.lang.clang.diagnostics.virtual_text = true
-O.lang.clang.diagnostics.signs = true
-O.lang.clang.diagnostics.underline = true
-
 -- python
--- add things like O.python.linter.flake8.exec_path
 -- O.python.linter = 'flake8'
 O.lang.python.isort = true
 O.lang.python.diagnostics.virtual_text = true
-O.lang.python.diagnostics.signs = true
-O.lang.python.diagnostics.underline = true
-O.lang.python.analysis.type_checking = "off"
-O.lang.python.analysis.auto_search_paths = true
 O.lang.python.analysis.use_library_code_types = true
 
 -- javascript
 O.lang.tsserver.linter = nil
 
--- php
-O.lang.php.environment.php_version = "7.4"
-O.lang.php.diagnostics.signs = true
-O.lang.php.diagnostics.underline = true
-O.lang.php.filetypes = { "php", "phtml" }
+-- Additional Plugins
+-- O.custom_plugins = {{"windwp/nvim-ts-autotag"}}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
 
+-- Additional Leader bindings for WhichKey
+-- O.user_which_key = {
+--   A = {
+--     name = "+Custom Leader Keys",
+--     a = { "<cmd>echo 'first custom command'<cr>", "Description for a" },
+--     b = { "<cmd>echo 'second custom command'<cr>", "Description for b" },
+--   },
+-- }
+
 O.plugin.ts_autotag.active = true
 O.lang.tailwindcss.active = true
 O.hl_search = true
+O.document_highlight = false
 
--- Additional Plugins
--- O.custom_plugins = {{"windwp/nvim-ts-autotag"}}
 O.custom_plugins = {
 	{ "RRethy/nvim-base16" },
 	{ "mattn/emmet-vim" },
