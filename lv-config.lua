@@ -65,6 +65,7 @@ O.lang.php.filetypes = { "php", "phtml" }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
 
+O.plugin.ts_autotag.active = true
 O.lang.tailwindcss.active = true
 O.hl_search = true
 
