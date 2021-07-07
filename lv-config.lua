@@ -64,7 +64,7 @@ O.lang.tailwindcss.active = true
 O.hl_search = true
 O.document_highlight = false
 
-O.custom_plugins = {
+O.user_plugins = {
 	{ "RRethy/nvim-base16" },
 	{ "mattn/emmet-vim" },
 	{ "tpope/vim-surround" },
