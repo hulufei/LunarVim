@@ -61,6 +61,8 @@ O.lang.tsserver.linter = nil
 
 O.plugin.ts_autotag.active = true
 O.lang.tailwindcss.active = true
+O.lang.rust.active = true
+O.lang.rust.rust_tools.active = true
 O.hl_search = true
 O.document_highlight = false
 
