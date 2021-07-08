@@ -191,6 +191,7 @@ O = {
       filetypes = { "rb", "erb", "rakefile", "ruby" },
     },
     rust = {
+      active = false,
       rust_tools = {
         active = false,
         parameter_hints_prefix = "<-",
