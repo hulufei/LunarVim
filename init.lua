@@ -18,3 +18,6 @@ end
 if O.lang.tailwindcss.active then
   require "lsp.tailwindcss-ls"
 end
+if O.lang.rust.active then
+  require "lsp.rust-ls"
+end
