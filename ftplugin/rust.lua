@@ -1,8 +1,5 @@
-local clients = vim.lsp.get_active_clients()
-for _, client in pairs(clients) do
-  if client.name == 'rust_analyzer' then
-    return
-  end
+if require("lv-utils").check_lsp_client_active "rust_analyzer" then
+  return
 end
 
 if O.lang.rust.rust_tools.active then
