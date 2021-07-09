@@ -60,21 +60,21 @@ O.lang.tsserver.linter = nil
 -- }
 
 O.plugin.ts_autotag.active = true
-O.lang.tailwindcss.active = true
 O.lang.rust.active = true
 O.lang.rust.rust_tools.active = true
 O.hl_search = true
-O.document_highlight = false
+
+require "lsp.tailwindcss-ls"
 
 O.user_plugins = {
-	{ "RRethy/nvim-base16" },
-	{ "mattn/emmet-vim" },
-	{ "tpope/vim-surround" },
-	-- ]n and [n jump to conflict section is awesome
-	{ "tpope/vim-unimpaired" },
+  { "RRethy/nvim-base16" },
+  { "mattn/emmet-vim" },
+  { "tpope/vim-surround" },
+  -- ]n and [n jump to conflict section is awesome
+  { "tpope/vim-unimpaired" },
 }
 
-vim.cmd([[
+vim.cmd [[
 function! QuickFixToggle()
     if empty(filter(getwininfo(), 'v:val.quickfix'))
         copen
@@ -91,4 +91,4 @@ set nostartofline
 set foldlevel=99
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-]])
+]]
