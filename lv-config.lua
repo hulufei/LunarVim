@@ -64,6 +64,7 @@ O.plugin.ts_autotag.active = true
 O.lang.rust.active = true
 O.lang.rust.rust_tools.active = true
 O.hl_search = true
+O.spell = true
 
 require "lsp.tailwindcss-ls"
 
