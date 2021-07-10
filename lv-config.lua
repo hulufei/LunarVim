@@ -10,7 +10,7 @@ an executable
 -- general
 O.format_on_save = true
 O.auto_complete = true
-O.colorscheme = "base16-solarized-light"
+O.colorscheme = "base16-summerfruit-light"
 O.auto_close_tree = 0
 O.wrap_lines = false
 O.timeoutlen = 300
@@ -64,7 +64,9 @@ O.plugin.ts_autotag.active = true
 O.lang.rust.active = true
 O.lang.rust.rust_tools.active = true
 O.hl_search = true
-O.spell = true
+-- spell check for dev is not ideal
+O.spell = false
+O.document_highlight = false
 
 require "lsp.tailwindcss-ls"
 
