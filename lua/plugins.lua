@@ -82,15 +82,6 @@ return require("packer").startup(function(use)
     event = "BufRead",
   }
 
-  -- whichkey
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      require "lv-which-key"
-    end,
-    event = "BufWinEnter",
-  }
-
   -- Autopairs
   use {
     "windwp/nvim-autopairs",
@@ -369,4 +360,14 @@ return require("packer").startup(function(use)
   for _, plugin in pairs(O.user_plugins) do
     packer.use(plugin)
   end
+
+  -- whichkey
+  -- keep it at last to make any user defined O.user_which_key works
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require "lv-which-key"
+    end,
+    event = "BufWinEnter",
+  }
 end)
