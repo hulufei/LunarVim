@@ -78,6 +78,12 @@ O.user_plugins = {
   { "tpope/vim-unimpaired" },
 }
 
+-- Go to previously opened buffer, which is more ergonomic
+vim.api.nvim_set_keymap("n", "<S-TAB>", ":b#<CR>", { noremap = true, silent = true })
+-- Use the tab key match bracket pairs. It's a hell of a lot easier to type <tab> than <%>
+vim.api.nvim_set_keymap("n", "<TAB>", "%", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<TAB>", "%", { noremap = true, silent = true })
+
 vim.cmd [[
 nnoremap ; :
 
