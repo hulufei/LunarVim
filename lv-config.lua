@@ -59,7 +59,6 @@ O.lang.tsserver.linter = nil
 --   },
 -- }
 
-O.plugin.floatterm.active = true
 O.plugin.ts_autotag.active = true
 O.lang.rust.active = true
 O.lang.rust.rust_tools.active = true

@@ -19,7 +19,7 @@ M.config = function()
   -- Create LazyGit Terminal
   local term = require "FTerm.terminal"
   local lazy = term:new():setup {
-    cmd = "gitui",
+    cmd = "lazygit",
     dimensions = {
       height = 0.9,
       width = 0.9,
@@ -34,8 +34,8 @@ M.config = function()
 
   -- Use this to toggle gitui in a floating terminal
   function _G.__fterm_lazygit()
-    if is_installed "gitui" ~= true then
-      print "Please install gitui. Check documentation for more information"
+    if is_installed "lazygit" ~= true then
+      print "Please install lazygit. Check documentation for more information"
       return
     end
     lazy:toggle()
