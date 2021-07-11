@@ -94,4 +94,9 @@ set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
 au BufRead,BufNewFile *.bean set filetype=beancount
+
+set showbreak=↪
+set lcs=tab:▸\ ,eol:¬,nbsp:_
+" Shortcut to rapidly toggle `set list`
+nmap ,l :set list!<CR>
 ]]
