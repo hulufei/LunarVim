@@ -87,4 +87,6 @@ set nostartofline
 set foldlevel=99
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
+
+au BufRead,BufNewFile *.bean set filetype=beancount
 ]]
