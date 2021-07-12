@@ -83,6 +83,14 @@ vim.api.nvim_set_keymap("n", "<S-TAB>", ":b#<CR>", { noremap = true, silent = tr
 -- Use the tab key match bracket pairs. It's a hell of a lot easier to type <tab> than <%>
 vim.api.nvim_set_keymap("n", "<TAB>", "%", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<TAB>", "%", { noremap = true, silent = true })
+-- jj is enough
+vim.api.nvim_set_keymap("i", "jk", "jk", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "kj", "kj", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "gs", ":TSLspOrganize<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "gq", ":TSLspFixCurrent<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "gr", ":TSLspRenameFile<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "ga", ":TSLspImportAll<CR>", { silent = true })
 
 vim.cmd [[
 nnoremap ; :
