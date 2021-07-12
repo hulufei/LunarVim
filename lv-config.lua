@@ -66,6 +66,7 @@ O.hl_search = true
 -- spell check for dev is not ideal
 O.spell = false
 O.document_highlight = false
+O.relative_number = true
 
 require "lsp.tailwindcss-ls"
 
