@@ -124,4 +124,7 @@ nmap ,l :set list!<CR>
 - `:cfdo update`
 - Even `:cfdo undo`
 
+Combile with nvim-bqf's ability to filter items of quickfix list can be powerful.
+Simply as `<tab>` to sign item, `zn` to create new list for signed items.
+See https://github.com/kevinhwang91/nvim-bqf#function-table for more info.
 --]]
