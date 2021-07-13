@@ -76,6 +76,7 @@ O.user_plugins = {
   { "tpope/vim-surround" },
   -- ]n and [n jump to conflict section is awesome
   { "tpope/vim-unimpaired" },
+  { "kevinhwang91/nvim-bqf" },
 }
 
 -- Go to previously opened buffer, which is more ergonomic
@@ -83,9 +84,13 @@ vim.api.nvim_set_keymap("n", "<S-TAB>", ":b#<CR>", { noremap = true, silent = tr
 -- Use the tab key match bracket pairs. It's a hell of a lot easier to type <tab> than <%>
 vim.api.nvim_set_keymap("n", "<TAB>", "%", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<TAB>", "%", { noremap = true, silent = true })
+
+-- [overrides]
 -- jj is enough
 vim.api.nvim_set_keymap("i", "jk", "jk", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "kj", "kj", { noremap = true, silent = true })
+-- <C-q> not my taste
+vim.api.nvim_set_keymap("", ",q", ":call QuickFixToggle()<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "gs", ":TSLspOrganize<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "gq", ":TSLspFixCurrent<CR>", { silent = true })
