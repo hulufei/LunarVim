@@ -89,7 +89,7 @@ vim.api.nvim_set_keymap("i", "kj", "kj", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "gs", ":TSLspOrganize<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "gq", ":TSLspFixCurrent<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "gr", ":TSLspRenameFile<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "gf", ":TSLspRenameFile<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "ga", ":TSLspImportAll<CR>", { silent = true })
 
 vim.cmd [[
@@ -109,3 +109,14 @@ set lcs=tab:▸\ ,eol:¬,nbsp:_
 " Shortcut to rapidly toggle `set list`
 nmap ,l :set list!<CR>
 ]]
+
+--[[
+# Tips and Tricks
+
+## Search and replace in quickfix window
+
+- `:cdo s/from/to`
+- `:cfdo update`
+- Even `:cfdo undo`
+
+--]]
