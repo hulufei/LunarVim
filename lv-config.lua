@@ -8,9 +8,6 @@ O.lsp.document_highlight = false
 O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = { "haskell" }
 
--- javascript
-O.lang.tsserver.linter = nil
-
 -- rust
 O.lang.rust.active = true
 O.lang.rust.rust_tools.active = true
