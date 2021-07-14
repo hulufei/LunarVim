@@ -4,9 +4,6 @@ O.default_options.hlsearch = true
 O.default_options.wrap = true
 O.lsp.document_highlight = false
 
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-O.plugin.dashboard.active = true
-
 -- if you don't want all the parsers change this to a table of the ones you want
 O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = { "haskell" }
