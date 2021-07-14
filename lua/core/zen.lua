@@ -1,11 +1,6 @@
 local M = {}
-local status_ok, zen_mode = pcall(require, "zen-mode")
-if not status_ok then
-  return
-end
-
 M.config = function()
-  zen_mode.setup {
+  O.plugin["zen"] = {
     window = {
       backdrop = 1,
       height = 0.85, -- height of the Zen window
@@ -27,4 +22,13 @@ M.config = function()
     },
   }
 end
+
+M.setup = function()
+  local status_ok, zen_mode = pcall(require, "zen-mode")
+  if not status_ok then
+    return
+  end
+  zen_mode.setup(O.plugin.zen)
+end
+
 return M
