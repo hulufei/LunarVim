@@ -10,7 +10,6 @@ O.treesitter.ignore_install = { "haskell" }
 
 -- javascript
 O.lang.tsserver.linter = nil
-O.lang.tsserver.formatter.args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) }
 
 -- rust
 O.lang.rust.active = true
