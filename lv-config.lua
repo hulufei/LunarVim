@@ -57,6 +57,18 @@ vim.api.nvim_set_keymap("n", "gq", ":TSLspFixCurrent<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "gf", ":TSLspRenameFile<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "ga", ":TSLspImportAll<CR>", { silent = true })
 
+function CopyExpandFilePath(v)
+  local path = vim.fn.expand(v)
+  vim.fn.setreg("*", path)
+  print("Copied " .. path .. " to clipboard")
+end
+O.user_which_key["y"] = {
+  name = "Copy Path",
+  p = { "<cmd>lua CopyExpandFilePath('%:p')<CR>", "Copy current buffer path" },
+  d = { "<cmd>lua CopyExpandFilePath('%:p:h')<CR>", "Copy current buffer parent path" },
+  f = { "<cmd>lua CopyExpandFilePath('%:t')<CR>", "Copy current buffer filename" },
+}
+
 vim.cmd [[
 nnoremap ; :
 
