@@ -78,4 +78,9 @@ nmap ,l :set list!<CR>
 Combile with nvim-bqf's ability to filter items of quickfix list can be powerful.
 Simply as `<tab>` to sign item, `zn` to create new list for signed items.
 See https://github.com/kevinhwang91/nvim-bqf#function-table for more info.
+
+## Toggle help window
+
+1. Inside help window, just :q
+2. Outside help window, <C-w>o or :on[ly] Make the current window the only one on the screen.
 --]]
