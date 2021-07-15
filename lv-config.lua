@@ -44,6 +44,12 @@ vim.api.nvim_set_keymap("i", "jk", "jk", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "kj", "kj", { noremap = true, silent = true })
 -- <C-q> not my taste
 vim.api.nvim_set_keymap("", ",q", ":call QuickFixToggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  ",A",
+  "<cmd>lua require('telescope.builtin').grep_string({search = vim.fn.expand('<cword>')})<cr>",
+  {}
+)
 
 -- nvim-lsp-ts-utils related
 vim.api.nvim_set_keymap("n", "gs", ":TSLspOrganize<CR>", { silent = true })
