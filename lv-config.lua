@@ -64,6 +64,18 @@ set showbreak=↪
 set lcs=tab:▸\ ,eol:¬,nbsp:_
 " Shortcut to rapidly toggle `set list`
 nmap ,l :set list!<CR>
+
+" vertical line ruler
+map ,ch :call SetColorColumn()<CR>
+function! SetColorColumn()
+  let col_num = virtcol(".")
+  let cc_list = split(&cc, ',')
+  if count(cc_list, string(col_num)) <= 0
+    execute "set cc+=".col_num
+  else
+    execute "set cc-=".col_num
+  endif
+endfunction
 ]]
 
 --[[
