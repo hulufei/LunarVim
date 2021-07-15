@@ -11,6 +11,10 @@ O.treesitter.ignore_install = { "haskell" }
 -- rust
 O.lang.rust.active = true
 O.lang.rust.rust_tools.active = true
+-- javascript
+O.lang.tsserver.linter = nil
+
+O.plugin.telescope.defaults.path_display = { "absolute" }
 
 O.user_plugins = {
   { "RRethy/nvim-base16" },
