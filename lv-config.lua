@@ -28,6 +28,9 @@ O.user_plugins = {
 require "lsp.tailwindcss-ls"
 
 O.colorscheme = "base16-summerfruit-light"
+local colors = require("colors")["summerfruit-light"]
+-- https://github.com/chriskempson/base16/blob/master/styling.md
+O.plugin.galaxyline.colors.alt_bg = colors.base01
 
 -- Go to previously opened buffer, which is more ergonomic
 vim.api.nvim_set_keymap("n", "<S-TAB>", ":b#<CR>", { noremap = true, silent = true })
