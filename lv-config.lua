@@ -1,3 +1,9 @@
+local status_ok, error = pcall(vim.cmd, "luafile " .. CONFIG_PATH .. "/lua/lv-user/init.lua")
+if not status_ok and string.find(error, "No such file or directory") == nil then
+  print "something is wrong with your lv-user/init.lua"
+  print(error)
+end
+
 O.default_options.timeoutlen = 300
 O.default_options.relativenumber = true
 O.default_options.hlsearch = true
