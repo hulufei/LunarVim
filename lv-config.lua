@@ -78,6 +78,7 @@ O.user_which_key["y"] = {
   d = { "<cmd>lua CopyExpandFilePath('%:p:h')<CR>", "Copy current buffer parent path" },
   f = { "<cmd>lua CopyExpandFilePath('%:t')<CR>", "Copy current buffer filename" },
 }
+O.user_which_key["C"] = { "<cmd>bdelete!<CR>", "Close Buffer!" }
 
 vim.cmd [[
 nnoremap ; :
