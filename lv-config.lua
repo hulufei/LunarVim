@@ -51,6 +51,10 @@ vim.api.nvim_set_keymap(
   {}
 )
 
+-- Tweak terminal
+vim.api.nvim_set_keymap("n", ",t", ":terminal<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<ESC>", "<C-\\><C-N>:bd!<cr>", { noremap = true, silent = true })
+
 -- nvim-lsp-ts-utils related
 vim.api.nvim_set_keymap("n", "gs", ":TSLspOrganize<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "gq", ":TSLspFixCurrent<CR>", { silent = true })
@@ -80,6 +84,8 @@ set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
 au BufRead,BufNewFile *.bean set filetype=beancount
+" Enter insert mode on terminal open
+au TermOpen term://* startinsert
 
 set showbreak=↪
 set lcs=tab:▸\ ,eol:¬,nbsp:_
@@ -116,4 +122,9 @@ See https://github.com/kevinhwang91/nvim-bqf#function-table for more info.
 
 1. Inside help window, just :q
 2. Outside help window, <C-w>o or :on[ly] Make the current window the only one on the screen.
+
+## Terminal Usage
+
+- Just use tmux, and CTRL-D to exit
+- Or if use :terminal, tnoremap :bd! to exist quickly
 --]]
