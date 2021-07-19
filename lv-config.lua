@@ -110,6 +110,9 @@ function! SetColorColumn()
     execute "set cc-=".col_num
   endif
 endfunction
+
+let jsx = { 'extends': 'jsx' }
+let g:user_emmet_settings = { 'typescript': jsx, 'javascript': jsx }
 ]]
 
 --[[
