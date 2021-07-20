@@ -54,6 +54,7 @@ vim.api.nvim_set_keymap(
   "n",
   ",A",
   "<cmd>lua require('telescope.builtin').grep_string({search = vim.fn.expand('<cword>')})<cr>",
+  -- "<cmd>lua require('telescope.builtin').live_grep({default_text = vim.fn.expand('<cword>')})<cr>",
   {}
 )
 
